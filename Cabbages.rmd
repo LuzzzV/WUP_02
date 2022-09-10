@@ -1,6 +1,6 @@
 ---
 title: "Cabbages"
-author: "Luz Vargas"
+author: "Luz Vrgas"
 date: "9/9/2022"
 output:
   html_document:
