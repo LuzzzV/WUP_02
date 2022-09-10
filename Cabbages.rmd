@@ -19,6 +19,9 @@ veggy <- cabbages
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
  The cabbages data from the MASS package is loaded into a dataframe called veggy. Complete this report by answering the following two questions  
  
+ $H_0$ No difference in the VitC content based on the Cultivation method  
+ $H_a$ There is a difference in the VitC content based on the Cultivation method  
+ 
 ### Is there a difference in average VitC between c39 and c52 cultivation methods?  
 
 # Methods
@@ -41,7 +44,7 @@ Because the response variable is numerical and the explanatory variable is categ
 plot(VitC~Cult,data=veggy)
 ```
 
-Based on the evidence shown on the Graphical Descriptive Results, the average cultivation in VitC c52 is greater than the Cultivation in VitC c39.
+Based on the evidence shown on the Graphical Descriptive Results, the average cultivation in VitC c52 is greater than the Cultivation in VitC c39. 
 
 ### Numerical Descriptive Results
 
@@ -58,6 +61,11 @@ The median in c52 is greater than c39 by 13.5 IU's.
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
+```{r}
+t.test(VitC~Cult,data=veggy)
+```
+
+Based on the inferential results, the p-value is less than 0.5 meaning there is a true difference in means between group c39 and group c52. The p-value is so small that we reject the null hypothesis.
 
 # Discussion and Conclusion
 
