@@ -24,6 +24,8 @@ veggy <- cabbages
 # Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
+Because the response variable is numerical and the explanatory variable is categorical we use the numerical categorical method helper.
+
 
 # Results
 
@@ -35,9 +37,22 @@ veggy <- cabbages
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
+```{r}
+plot(VitC~Cult,data=veggy)
+```
+
+Based on the evidence shown on the Graphical Descriptive Results, the average cultivation in VitC c52 is greater than the Cultivation in VitC c39.
+
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+```{r}
+favstats(VitC~Cult,data=veggy)
+```
+
+The median in c52 is greater than c39 by 13.5 IU's.
+
 
 ## Inferential Results
 
